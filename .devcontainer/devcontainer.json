@@ -1,6 +1,6 @@
 {
-    "name": "Python 3.13",
-    "image": "mcr.microsoft.com/devcontainers/python:3.13",
+    "name": "Python 3.12",
+    "image": "mcr.microsoft.com/devcontainers/python:3.12",
     "postCreateCommand": "python3 -m pip install --upgrade pip && pip3 install virtualenv && virtualenv hydra && source hydra/bin/activate && wget https://github.com/ta-lib/ta-lib/releases/download/v0.6.4/ta-lib-0.6.4-src.tar.gz && tar -xzf ta-lib-0.6.4-src.tar.gz && cd ta-lib-0.6.4/ && ./configure --prefix=/usr && make && sudo make install && pip install ta-lib"
   }
   
