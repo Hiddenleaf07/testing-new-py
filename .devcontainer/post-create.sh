@@ -6,12 +6,23 @@ python3 -m pip install --upgrade pip
 # Install TA-Lib (corrected)
 wget https://github.com/ta-lib/ta-lib/releases/download/v0.6.3/ta-lib-0.6.3-src.tar.gz
 tar -xzf ta-lib-0.6.3-src.tar.gz
-cd /workspaces/testing-new-py/ta-lib-0.6.3
-./configure --prefix=/usr/local  # Important: Specify a prefix!
+cd ta-lib-0.6.3
+./configure --prefix=/usr/local
 make
 sudo make install
 
-# Install TA-Lib's Python wrapper
-pip install TA-Lib
+# Navigate to your project directory
+cd /workspaces/testing-new-py
 
-echo "TA-Lib installation complete!"
+# Create a virtual environment
+python3 -m venv .venv
+
+# Activate the virtual environment
+source /workspaces/testing-new-py/.venv/bin/activate  # For Unix-based systems
+# .venv\Scripts\activate  # For Windows
+
+# Upgrade pip in the virtual environment
+pip install --upgrade pip
+
+# Install pkscreener and TA-Lib
+pip install pkscreener==0.46.20250221.728 ta-lib
