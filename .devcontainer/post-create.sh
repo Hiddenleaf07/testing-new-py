@@ -25,4 +25,4 @@ source /workspaces/testing-new-py/.venv/bin/activate  # For Unix-based systems
 pip install --upgrade pip
 
 # Install pkscreener and TA-Lib pkscreener==0.46.20250130.673
-pip install ta-lib pkscreener
+pip install ta-lib
